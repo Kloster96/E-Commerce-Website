@@ -26,7 +26,9 @@ export const ProductCard = ({ product, priority = false }: ProductCardProps) => 
     e.preventDefault();
     e.stopPropagation();
     if (!selectedSize) return;
-    addItem(product, selectedSize);
+    // Get first color or empty string
+    const color = product.colors?.[0]?.name || '';
+    addItem(product, selectedSize, color);
     setShowAdded(true);
     setTimeout(() => setShowAdded(false), 2000);
   };
