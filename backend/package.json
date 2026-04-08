@@ -5,12 +5,11 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "npx tsc",
+    "build": "tsc --skipLibCheck",
     "start": "node dist/index.js",
     "seed": "npx tsx src/seed.ts",
     "seed:products": "npx tsx src/seedProducts.ts",
-    "seed:gallery": "npx tsx src/seedGallery.ts",
-    "postinstall": "npm run build"
+    "seed:gallery": "npx tsx src/seedGallery.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
