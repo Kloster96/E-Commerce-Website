@@ -78,7 +78,7 @@ export default async function Home({ searchParams }: HomeProps) {
     if (params.onSale) return `${products.length} productos con descuento`;
     if (params.category) {
       const cat = CATEGORIES.find(c => c.value === params.category);
-      return `Explora nuestra colección de ${(cat?.name || '').toLowerCase()}`;
+      return `Explora nuestra colección de ${(cat?.label || '').toLowerCase()}`;
     }
     return 'Encuentra las mejores zapatillas y ropa de las marcas más populares';
   };
