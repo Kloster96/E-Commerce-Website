@@ -4,7 +4,7 @@
 
 ## 🌐 Ver la tienda
 
-**URL:** **[Ver la tienda](https://e-commerce-website-gp9e2r1d4-kloster96s-projects.vercel.app)**
+**URL:** **[Sitio Web de la tienda](https://e-commerce-website-gp9e2r1d4-kloster96s-projects.vercel.app)**
 
 ---
 
