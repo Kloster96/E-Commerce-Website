@@ -9,6 +9,8 @@ export interface SneakerDTO {
   images: string[];
   sizes: number[];
   stock: number;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export const sneakerAdapter = (data: unknown): Sneaker => {
