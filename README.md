@@ -2,6 +2,12 @@
 
 > Tienda online de sneakers y ropa deportiva desarrollada con Next.js y Express.
 
+## 🌐 Ver la tienda
+
+**URL:** https://e-commerce-website-gp9e2r1d4-kloster96s-projects.vercel.app
+
+---
+
 ## 📋 Descripción del Proyecto
 
 Este es un **e-commerce completo** para la venta de zapatillas, ropa y accesorios deportivos. El sistema incluye:
@@ -19,11 +25,11 @@ Este es un **e-commerce completo** para la venta de zapatillas, ropa y accesorio
 
 ### Para **Non-Técnicos** (RH, Marketing, Dueños del negocio)
 
-Ir a la sección: **[Cómo usar la tienda](#cómo-usar-la-tienda)**
+Ir a la sección: **[GUIA-USUARIO.md](./GUIA-USUARIO.md)**
 
 ### Para **Desarrolladores** (Técnicos)
 
-Ir a la sección: **[Para Desarrolladores](#para-desarrolladores)**
+Ir a la sección: **[GUIA-DESARROLLADOR.md](./GUIA-DESARROLLADOR.md)**
 
 ---
 
