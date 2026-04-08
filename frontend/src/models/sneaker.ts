@@ -14,10 +14,3 @@ export interface Sneaker {
 export interface SneakerFilters {
   brand?: string;
 }
-
-export interface ApiResponse<T = unknown> {
-  success: boolean;
-  data?: T;
-  error?: string;
-  message?: string;
-}
