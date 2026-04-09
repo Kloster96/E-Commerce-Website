@@ -1,10 +1,6 @@
 # 🛒 E-Commerce Website
 
-> Tienda online de sneakers y ropa deportiva desarrollada con Next.js y Express.
-
-## 🌐 Ver la tienda
-
-**URL:** **[Sitio Web de la tienda](https://e-commerce-website-gp9e2r1d4-kloster96s-projects.vercel.app)**
+> Tienda online de sneakers y ropa deportiva.
 
 ---
 
@@ -67,8 +63,9 @@ El panel de admin permite gestionar:
 #### ¿Cómo acceder al admin?
 
 1. Ir a: `/login`
-2. Usuario: `admin`
-3. Contraseña: `admin123` ⚠️ **Cambiar en producción**
+2. Ingresar las credenciales configuradas en el backend
+
+Las credenciales se configuran mediante variables de entorno (`ADMIN_USER` y `ADMIN_PASS`). Consultar con el equipo de desarrollo.
 
 #### Funciones del Admin:
 
@@ -208,7 +205,7 @@ npm run seed:gallery
 
 3. **MongoDB**: Se requiere una base de datos MongoDB Atlas o local.
 
-4. **Seguridad**: Las credenciales del admin (`admin/admin123`) deben cambiarse en producción mediante variables de entorno (`ADMIN_USER`, `ADMIN_PASS`).
+4. **Seguridad**: Las credenciales del admin se configuran mediante variables de entorno (`ADMIN_USER` y `ADMIN_PASS`). Nunca exponer credenciales en el código.
 
 ---
 
