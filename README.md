@@ -32,7 +32,7 @@ Ir a la sección: **[GUIA-DESARROLLADOR.md](./GUIA-DESARROLLADOR.md)**
 ## 🏪 Cómo usar la tienda
 
 ### 1. Acceder al sitio
-## 🌐 Live Demo
+🌐 Live Demo
 **[Ver la tienda →](https://e-commerce-website-hazel-gamma.vercel.app)**
 
 ### 2. Navegar por el catálogo
