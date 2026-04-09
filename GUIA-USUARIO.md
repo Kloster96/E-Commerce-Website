@@ -4,12 +4,6 @@
 
 ---
 
-## 🌐 Acceder a la tienda
-
-**URL de la tienda:** https://e-commerce-website-gp9e2r1d4-kloster96s-projects.vercel.app
-
----
-
 ## 🏪 Cómo usar la tienda
 
 ### 1. Explorar productos
@@ -47,10 +41,9 @@ El admin permite gestionar los productos y la galería de imágenes.
 ### ¿Cómo acceder?
 
 1. Ir a: **/login**
-2. **Usuario:** `admin`
-3. **Contraseña:** `admin123`
+2. Ingresar las credenciales configuradas en el backend
 
-⚠️ **Importante:** Estas credenciales son temporales. En producción deben cambiarse.
+⚠️ **Nota:** Las credenciales se configuran mediante variables de entorno (`ADMIN_USER` y `ADMIN_PASS`). Consultar con el equipo de desarrollo para obtener acceso.
 
 ### Funciones disponibles
 
