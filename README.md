@@ -1,218 +1,182 @@
 # 🛒 E-Commerce Website
 
-> Tienda online de sneakers y ropa deportiva.
+> Online store for sneakers and sportswear.
 
 ---
 
-## 📋 Descripción del Proyecto
+## 📋 Project Description
 
-Este es un **e-commerce completo** para la venta de zapatillas, ropa y accesorios deportivos. El sistema incluye:
+This is a **complete e-commerce** system for selling sneakers, clothing, and sports accessories. The system includes:
 
-- 🛍️ **Catálogo de productos** con filtros por categoría, búsqueda y ordenamiento
-- 🛒 **Carrito de compras** con gestión de talles y colores
-- 💳 **Checkout** con integración a MercadoPago (opcional)
-- 👨‍💼 **Panel de administración** para gestionar productos, galería y más
-- 📱 **Diseño responsive** adaptado a móviles y escritorio
-- 🎨 **Galería visual** con slider y scroll infinito
-
----
-
-## 👥 ¿Para quién es este documento?
-
-### Para **Non-Técnicos** (RH, Marketing, Dueños del negocio)
-
-Ir a la sección: **[GUIA-USUARIO.md](./GUIA-USUARIO.md)**
-
-### Para **Desarrolladores** (Técnicos)
-
-Ir a la sección: **[GUIA-DESARROLLADOR.md](./GUIA-DESARROLLADOR.md)**
+- 🛍️ **Product Catalog** with category filters, search, and sorting
+- 🛒 **Shopping Cart** with size and color management
+- 💳 **Checkout** with MercadoPago integration (optional)
+- 👨‍💼 **Admin Panel** to manage products, gallery, and more
+- 📱 **Responsive Design** adapted for mobile and desktop
+- 🎨 **Visual Gallery** with slider and infinite scroll
 
 ---
 
-## 🏪 Cómo usar la tienda
+## 👥 Who is this document for?
 
-### 1. Acceder al sitio
+### For **Non-Technical Users** (HR, Marketing, Business Owners)
+
+Go to section: **[USER-GUIDE.md](./GUIA-USUARIO.md)**
+
+### For **Developers** (Technical)
+
+Go to section: **[DEVELOPER-GUIDE.md](./GUIA-DESARROLLADOR.md)**
+
+---
+
+## 🏪 How to use the store
+
+### 1. Access the site
 🌐 Live Demo
-**[Ver la tienda →](https://e-commerce-website-hazel-gamma.vercel.app)**
+**[View the store →](https://e-commerce-website-hazel-gamma.vercel.app)**
 
-### 2. Navegar por el catálogo
+### 2. Navigate the catalog
 
-- **Explorar productos**: En la página principal verás todos los productos
-- **Filtrar por categoría**: Usa los botones superiores (Sneakers, Remeras, Pantalones, etc.)
-- **Buscar**: Usa el buscador para encontrar productos específicos
-- **Ordenar**: Podés ordenar por precio, descuento o popularidad
+- **Explore products**: You will see all products on the main page
+- **Filter by category**: Use the top buttons (Sneakers, T-shirts, Pants, etc.)
+- **Search**: Use the search bar to find specific products
+- **Sort**: You can sort by price, discount, or popularity
 
-### 3. Comprar un producto
+### 3. Buy a product
 
-1. **Elegir producto**: Click en cualquier producto para ver los detalles
-2. **Seleccionar talle**: Elegí tu número/talle en la tabla
-3. **Seleccionar color** (si aplica): Los colores aparecen como opciones
-4. **Agregar al carrito**: Click en "Agregar al Carrito"
-5. **Ir al carrito**: Click en el ícono del carrito arriba a la derecha
-6. **Finalizar compra**: Completá los datos y confirmación
+1. **Choose product**: Click on any product to see the details
+2. **Select size**: Choose your size/number from the table
+3. **Select color** (if applicable): Colors appear as options
+4. **Add to cart**: Click on "Add to Cart"
+5. **Go to cart**: Click on the cart icon at the top right
+6. **Complete purchase**: Fill in the data and confirmation
 
-### 4. Panel de Administración
+### 4. Admin Panel
 
-El panel de admin permite gestionar:
+The admin panel allows managing:
 
-- **Ver productos**: Lista de todos los productos con stock
-- **Editar productos**: Cambiar precios, descripciones, stock
-- **Gestionar galería**: Agregar/modificar imágenes del slider y galería
-- **Ver pedidos**: (Próximamente) Pedidos realizados
+- **View products**: List of all products with stock
+- **Edit products**: Change prices, descriptions, stock
+- **Manage gallery**: Add/modify images for the slider and gallery
+- **View orders**: (Coming soon) Orders placed
 
-#### ¿Cómo acceder al admin?
+#### How to access the admin?
 
-1. Ir a: `/login`
-2. Ingresar las credenciales configuradas en el backend
+1. Go to: `/login`
+2. Enter the credentials configured in the backend
 
-Las credenciales se configuran mediante variables de entorno (`ADMIN_USER` y `ADMIN_PASS`). Consultar con el equipo de desarrollo.
+The credentials are configured using environment variables (`ADMIN_USER` and `ADMIN_PASS`). Consult with the development team.
 
-#### Funciones del Admin:
+#### Admin Functions:
 
-| Función | Descripción |
+| Function | Description |
 |---------|-------------|
-| **Stock por talle** | Podés ver y editar el stock de cada talle |
-| **Productos destacados** | Marcar productos como destacados |
-| **Descuentos** | Aplicar descuentos en porcentaje |
-| **Galería** | Agregar imágenes al slider y galería |
+| **Stock by size** | You can view and edit the stock for each size |
+| **Featured products** | Mark products as featured |
+| **Discounts** | Apply percentage discounts |
+| **Gallery** | Add images to the slider and gallery |
 
 ---
 
-## 💻 Para Desarrolladores
+## 💻 For Developers
 
-### 🛠️ Tecnologías Utilizadas
+### 🛠️ Technologies Used
 
-| Capa | Tecnología |
+| Layer | Technology |
 |------|-------------|
 | **Frontend** | Next.js 14, React, TypeScript, Tailwind CSS, Zustand |
 | **Backend** | Express.js, Node.js, MongoDB (Mongoose) |
-| **Pagos** | MercadoPago (opcional) |
+| **Payments** | MercadoPago (optional) |
 | **Deploy** | Vercel (Frontend), Render (Backend) |
-| **Imágenes** | Unsplash (desarrollo), Cloudinary (próximamente) |
+| **Images** | Unsplash (development), Cloudinary (coming soon) |
 
-### 📁 Estructura del Proyecto
+### 📁 Project Structure
 
-```
 E-Commerce-Website/
-├── frontend/                 # Aplicación Next.js
+├── frontend/                 # Next.js Application
 │   ├── src/
-│   │   ├── app/            # Páginas y rutas
-│   │   ├── components/     # Componentes reutilizables
-│   │   ├── models/         # Tipos e interfaces TypeScript
-│   │   ├── store/          # Estado global (Zustand)
-│   │   ├── services/       # Servicios API
-│   │   └── adapters/       # Adaptadores de datos
+│   │   ├── app/              # Pages and routes
+│   │   ├── components/       # Reusable components
+│   │   ├── models/           # TypeScript types and interfaces
+│   │   ├── store/            # Global state (Zustand)
+│   │   ├── services/         # API services
+│   │   └── adapters/         # Data adapters
 │   └── package.json
 │
-├── backend/                  # API Express
+├── backend/                  # Express API
 │   ├── src/
-│   │   ├── controllers/    # Controladores de rutas
-│   │   ├── models/        # Modelos de MongoDB
-│   │   ├── routes/        # Definición de rutas API
-│   │   ├── services/      # Lógica de negocio
-│   │   └── middleware/    # Middleware Express
+│   │   ├── controllers/      # Route controllers
+│   │   ├── models/           # MongoDB models
+│   │   ├── routes/           # API route definition
+│   │   ├── services/         # Business logic
+│   │   └── middleware/       # Express middleware
 │   └── package.json
 │
-└── README.md               # Este archivo
-```
+└── README.md                 # This file
 
-### 🚀 Variables de Entorno
+### 🚀 Environment Variables
 
 #### Frontend (`.env`)
-
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:3001
-```
-
-#### Backend (`.env`)
-
-```env
 PORT=3001
 MONGO_URI=mongodb+srv://...
-MERCADOPAGO_ACCESS_TOKEN=tu_token
+MERCADOPAGO_ACCESS_TOKEN=your_token
 MERCADOPAGO_SANDBOX=true
 ```
-
-### ⚡ Scripts
-
-#### Frontend
-
-```bash
 cd frontend
 npm install
-npm run dev     # Desarrollo en http://localhost:3000
-npm run build   # Build para producción
-npm run start   # Producción
-```
+npm run dev     # Development at http://localhost:3000
+npm run build   # Build for production
+npm run start   # Production
 
-#### Backend
-
-```bash
 cd backend
 npm install
-npm run dev     # Desarrollo en http://localhost:3001
-npm run start   # Producción
-```
+npm run dev     # Development at http://localhost:3001
+npm run start   # Production
 
-### 🔧 Cargar Datos de Prueba (Seed)
+☁️ Deploy
+Frontend → Vercel
+Go to vercel.com
 
-El backend incluye scripts para cargar productos de ejemplo:
+Import the repository E-Commerce-Website
 
-```bash
-cd backend
+Framework: Next.js
 
-# Cargar productos
-npm run seed:products
+Add variable:
 
-# Cargar galería
-npm run seed:gallery
-```
+NEXT_PUBLIC_API_URL = https://your-backend.onrender.com
 
----
+Automatic deploy
 
-## ☁️ Deploy
+Backend → Render
+Go to render.com
 
-### Frontend → Vercel
+New Web Service
 
-1. Ir a [vercel.com](https://vercel.com)
-2. Importar el repositorio `E-Commerce-Website`
-3. Framework: **Next.js**
-4. Agregar variable:
-   - `NEXT_PUBLIC_API_URL` = `https://tu-backend.onrender.com`
-5. Deploy automático
+Connect the repository
 
-### Backend → Render
+Configuration:
 
-1. Ir a [render.com](https://render.com)
-2. Nuevo **Web Service**
-3. Conectar el repositorio
-4. Configuración:
-   - Root: `backend`
-   - Build: `npm install`
-   - Start: `npx tsx src/index.ts`
-5. Variables:
-   - `PORT=3001`
-   - `MONGO_URI=tu_connection_string`
-6. Deploy
+Root: backend
 
----
+Build: npm install
 
-## ⚠️ Notas Importantes
+Start: npx tsx src/index.ts
 
-1. **MercadoPago**: Requiere cuenta verificada para aceptar pagos reales. En modo sandbox funciona con usuarios de prueba.
+Variables:
 
-2. **Imágenes**: Las imágenes de productos son de Unsplash (servicio externo). Pueden caducar o no cargar.
+PORT=3001
 
-3. **MongoDB**: Se requiere una base de datos MongoDB Atlas o local.
+MONGO_URI=your_connection_string
 
-4. **Seguridad**: Las credenciales del admin se configuran mediante variables de entorno (`ADMIN_USER` y `ADMIN_PASS`). Nunca exponer credenciales en el código.
+Deploy
 
----
+⚠️ Important Notes
+MercadoPago: Requires a verified account to accept real payments. In sandbox mode, it works with test users.
 
-## 📞 Soporte
+Images: Product images are from Unsplash (external service). They may expire or fail to load.
 
-Para dudas técnicas o reportar problemas, contactá al equipo de desarrollo.
+MongoDB: A MongoDB Atlas or local database is required.
 
----
-
-*Documento generado automáticamente para el proyecto E-Commerce Website*
+Security: Admin credentials are configured via environment variables (ADMIN_USER and ADMIN_PASS). Never expose credentials in the code.
