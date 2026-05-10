@@ -1,125 +1,118 @@
-# 📖 Guía para Usuarios
+# 📖 User Guide
 
-> Guía dirigida a personas sin conocimientos técnicos (RH, Marketing, Dueños del negocio).
-
----
-
-## 🏪 Cómo usar la tienda
-
-### 1. Explorar productos
-
-En la página principal verás todos los productos disponibles. Podés:
-
-- **Ver productos destacados**: Los que aparecen en la sección superior
-- **Navegar por categorías**: Usá los botones de categorías (Sneakers, Remeras, etc.)
-- **Buscar productos**: Usá el buscador para encontrar algo específico
-
-### 2. Filtrar y ordenar
-
-| Función | Cómo usarla |
-|---------|--------------|
-| **Por categoría** | Click en los botones superiores (Sneakers, Remeras, etc.) |
-| **Buscar** | Escribí en el buscador y presioná Enter |
-| **Ordenar** | Elegí una opción del dropdown (precio, descuento, popularidad) |
-
-### 3. Comprar un producto
-
-1. **Elegir producto**: Click en cualquier tarjeta de producto
-2. **Ver detalles**: Se abre la página del producto
-3. **Seleccionar talle**: Elegí tu número/talle de la tabla
-4. **Seleccionar color** (si aplica): Click en el color deseado
-5. **Agregar al carrito**: Click en "Agregar al Carrito"
-6. **Ver carrito**: Click en el ícono del carrito (arriba a la derecha)
-7. **Finalizar compra**: Completá los datos y confirmá
+> Guide aimed at non-technical users (HR, Marketing, Business Owners).
 
 ---
 
-## 👨‍💼 Panel de Administración
+## 🏪 How to Use the Store
 
-El admin permite gestionar los productos y la galería de imágenes.
+### 1. Browse Products
 
-### ¿Cómo acceder?
+On the main page you'll see all available products. You can:
 
-1. Ir a: **/login**
-2. Ingresar las credenciales configuradas en el backend
+- **View featured products**: Those shown in the top section
+- **Browse by category**: Use the category buttons (Sneakers, T-Shirts, etc.)
+- **Search for products**: Use the search bar to find something specific
 
-⚠️ **Nota:** Las credenciales se configuran mediante variables de entorno (`ADMIN_USER` y `ADMIN_PASS`). Consultar con el equipo de desarrollo para obtener acceso.
+### 2. Filter and Sort
 
-### Funciones disponibles
+| Feature | How to use it |
+|---------|---------------|
+| **By category** | Click the top buttons (Sneakers, T-Shirts, etc.) |
+| **Search** | Type in the search bar and press Enter |
+| **Sort** | Choose an option from the dropdown (price, discount, popularity) |
 
-| Función | Descripción |
+### 3. Buying a Product
+
+1. **Choose a product**: Click on any product card
+2. **View details**: The product page will open
+3. **Select size**: Pick your size from the table
+4. **Select color** (if applicable): Click on the desired color
+5. **Add to cart**: Click "Add to Cart"
+6. **View cart**: Click the cart icon (top right)
+7. **Checkout**: Fill in your details and confirm
+
+---
+
+## 👨‍💼 Admin Panel
+
+The admin panel lets you manage products and the image gallery.
+
+### How to access it
+
+1. Go to: **/login**
+2. Enter the credentials configured in the backend
+
+⚠️ **Note:** Credentials are set via environment variables (`ADMIN_USER` and `ADMIN_PASS`). Contact the development team to get access.
+
+### Available features
+
+| Feature | Description |
 |---------|-------------|
-| **Ver productos** | Lista de todos los productos con su stock |
-| **Editar producto** | Cambiar precio, descripción, imágenes |
-| **Stock por talle** | Ver y modificar el stock de cada talle |
-| **Destacados** | Marcar productos como destacados |
-| **Descuentos** | Aplicar descuento en porcentaje |
-| **Galería** | Agregar/modificar imágenes del slider y galería |
+| **View products** | List of all products with their stock |
+| **Edit product** | Change price, description, images |
+| **Stock by size** | View and update stock for each size |
+| **Featured** | Mark products as featured |
+| **Discounts** | Apply a percentage discount |
+| **Gallery** | Add/edit slider and gallery images |
 
-### Gestión de productos
+### Product Management
 
-En el panel de admin vas a poder:
+In the admin panel you can:
 
-- **Editar**: Cambiar nombre, precio, descripción, marca
-- **Stock**: Modificar la cantidad disponible por talle
-- **Descuentos**: Agregar porcentaje de descuento
-- **Destacados**: Definir qué productos aparecen primero
+- **Edit**: Change name, price, description, brand
+- **Stock**: Update available quantity per size
+- **Discounts**: Add a discount percentage
+- **Featured**: Define which products appear first
 
-### Gestión de galería
+### Gallery Management
 
-La galería tiene dos secciones:
+The gallery has two sections:
 
-1. **Slider**: Imágenes grandes que aparecen al principio
-2. **Galería**: Imágenes en scroll infinito
+1. **Slider**: Large images shown at the top
+2. **Gallery**: Images in an infinite scroll layout
 
-Podés:
-- Agregar nuevas imágenes
-- Editar el orden
-- Activar/desactivar imágenes
-- Agregar badges (NUEVO, OFERTA, etc.)
+You can:
 
----
-
-## 💡 Consejos útiles
-
-### Para gestionar el catálogo
-
-- **Mantener stock actualizado**: Revisá periódicamente el stock en el admin
-- **Destacar productos**: Marcá como destacados los productos que quieras promover
-- **Aplicar descuentos**: Usá los descuentos para liquidaciones o promociones
-
-### Para la galería
-
-- **Calidad de imágenes**: Usá imágenes de alta calidad (mínimo 800px de ancho)
-- **Relevancia**: Las primeras imágenes del slider son las más importantes
-- **Actualización**: Actualizá la galería periódicamente con productos nuevos
+- Add new images
+- Edit the order
+- Enable/disable images
+- Add badges (NEW, SALE, etc.)
 
 ---
 
-## ❓ Preguntas frecuentes
+## 💡 Useful Tips
 
-### ¿Qué pasa si no hay stock de mi talle?
+### Managing the catalog
 
-No vas a poder seleccionar ese talle. Si necesitás ese producto, contactá al equipo para ver si hay máscoming soon.
+- **Keep stock updated**: Regularly check stock levels in the admin panel
+- **Feature products**: Mark as featured the products you want to promote
+- **Apply discounts**: Use discounts for clearance sales or promotions
 
-### ¿Cómo cambio el precio de un producto?
+### Managing the gallery
 
-En el panel de admin, editá el producto y modificá el campo de precio.
-
-### ¿Puedo agregar nuevos productos?
-
-Próximamente se incluirá la función de agregar productos desde el panel de admin.
-
-### ¿El sitio acepta pagos?
-
-Sí, pero actualmente está en modo demo. La integración con MercadoPago requiere configuración adicional.
+- **Image quality**: Use high-quality images (minimum 800px wide)
+- **Relevance**: The first slider images are the most visible
+- **Keep it fresh**: Update the gallery regularly with new products
 
 ---
 
-## 📞 ¿Necesitás ayuda?
+## ❓ Frequently Asked Questions
 
-Si tenés dudas sobre cómo usar la tienda o el panel de admin, contactá al equipo de desarrollo.
+### What if my size is out of stock?
+
+You won't be able to select that size. If you need that product, contact the team to check availability.
+
+### How do I change a product's price?
+
+In the admin panel, edit the product and update the price field.
+
+### Can I add new products?
+
+The ability to add products directly from the admin panel is coming soon.
+
+### Does the site accept payments?
+
+Yes, but it's currently in demo mode. The MercadoPago integration requires additional configuration.
 
 ---
-
-*Guía para usuarios del E-Commerce Website*
