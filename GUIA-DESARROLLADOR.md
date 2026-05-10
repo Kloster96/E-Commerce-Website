@@ -1,61 +1,61 @@
-# 💻 Guía para Desarrolladores
+# 💻 Developer Guide
 
-> Guía técnica para desarrolladores que necesiten entender, modificar o extender el proyecto.
+> Technical guide for developers who need to understand, modify, or extend the project.
 
 ---
 
-## 🛠️ Tecnologías
+## 🛠️ Tech Stack
 
-| Capa | Tecnología |
-|------|-------------|
+| Layer | Technology |
+|-------|------------|
 | **Frontend** | Next.js 14, React, TypeScript, Tailwind CSS, Zustand |
 | **Backend** | Express.js, Node.js, MongoDB (Mongoose) |
-| **Pagos** | MercadoPago SDK |
+| **Payments** | MercadoPago SDK |
 | **Deploy** | Vercel (Frontend), Render (Backend) |
 
 ---
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
 E-Commerce-Website/
 ├── frontend/                 # Next.js App Router
 │   ├── src/
-│   │   ├── app/            # Páginas (page.tsx, layout.tsx)
-│   │   ├── components/     # Componentes React
-│   │   ├── models/         # Interfaces TypeScript
-│   │   ├── store/         # Zustand (estado global)
-│   │   ├── services/      # Llamadas API
-│   │   └── adapters/      # Transformación de datos
+│   │   ├── app/            # Pages (page.tsx, layout.tsx)
+│   │   ├── components/     # React components
+│   │   ├── models/         # TypeScript interfaces
+│   │   ├── store/          # Zustand (global state)
+│   │   ├── services/       # API calls
+│   │   └── adapters/       # Data transformation
 │   ├── package.json
 │   └── next.config.js
 │
 ├── backend/                  # Express API
 │   ├── src/
-│   │   ├── controllers/    # Lógica de rutas
-│   │   ├── models/        # Modelos Mongoose
-│   │   ├── routes/        # Definición de rutas
-│   │   ├── services/     # Lógica de negocio
-│   │   ├── middleware/   # Middleware Express
-│   │   └── index.ts      # Entry point
+│   │   ├── controllers/    # Route logic
+│   │   ├── models/         # Mongoose models
+│   │   ├── routes/         # Route definitions
+│   │   ├── services/       # Business logic
+│   │   ├── middleware/     # Express middleware
+│   │   └── index.ts        # Entry point
 │   ├── package.json
-│   └── Procfile           # Render config
+│   └── Procfile            # Render config
 │
 ├── README.md
-├── GUIA-USUARIO.md
-└── GUIA-DESARROLLADOR.md
+├── USER-GUIDE.md
+└── DEVELOPER-GUIDE.md
 ```
 
 ---
 
-## 🚀 Inicio Rápido (Desarrollo Local)
+## 🚀 Quick Start (Local Development)
 
-### Prerrequisitos
+### Prerequisites
 
 - Node.js 18+
-- MongoDB (local o Atlas)
+- MongoDB (local or Atlas)
 
-### 1. Clonar y preparar
+### 1. Clone and set up
 
 ```bash
 git clone https://github.com/Kloster96/E-Commerce-Website.git
@@ -68,19 +68,19 @@ cd E-Commerce-Website
 cd backend
 npm install
 
-# Crear archivo .env
+# Create .env file
 cp .env.example .env
-# Editar .env con tus credenciales
+# Edit .env with your credentials
 
 npm run dev
-# Backend corriendo en http://localhost:3001
+# Backend running at http://localhost:3001
 ```
 
-**Variables del backend (.env):**
+**Backend environment variables (.env):**
 ```env
 PORT=3001
-MONGO_URI=mongodb+srv://tu_connection_string
-MERCADOPAGO_ACCESS_TOKEN=tu_token
+MONGO_URI=mongodb+srv://your_connection_string
+MERCADOPAGO_ACCESS_TOKEN=your_token
 MERCADOPAGO_SANDBOX=true
 ```
 
@@ -90,165 +90,157 @@ MERCADOPAGO_SANDBOX=true
 cd frontend
 npm install
 
-# Crear archivo .env.local
+# Create .env.local file
 echo "NEXT_PUBLIC_API_URL=http://localhost:3001" > .env.local
 
 npm run dev
-# Frontend corriendo en http://localhost:3000
+# Frontend running at http://localhost:3000
 ```
 
 ---
 
 ## 📡 API Endpoints
 
-### Productos
+### Products
 
-| Método | Endpoint | Descripción |
+| Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/api/products` | Listar productos (soporta filtros) |
-| GET | `/api/products/:id` | Obtener un producto |
-| POST | `/api/products` | Crear producto |
-| PUT | `/api/products/:id` | Actualizar producto |
-| DELETE | `/api/products/:id` | Eliminar producto |
+| GET | `/api/products` | List products (supports filters) |
+| GET | `/api/products/:id` | Get a single product |
+| POST | `/api/products` | Create a product |
+| PUT | `/api/products/:id` | Update a product |
+| DELETE | `/api/products/:id` | Delete a product |
 
-**Parámetros de query:**
-- `category`: Filtrar por categoría
-- `search`: Búsqueda por nombre
-- `brand`: Filtrar por marca
-- `sort`: Ordenamiento (price_asc, price_desc, discount, popular)
-- `page`, `limit`: Paginación
+**Query parameters:**
+- `category`: Filter by category
+- `search`: Search by name
+- `brand`: Filter by brand
+- `sort`: Sorting (price_asc, price_desc, discount, popular)
+- `page`, `limit`: Pagination
 
-### Galería
+### Gallery
 
-| Método | Endpoint | Descripción |
+| Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/api/gallery/slider` | Imágenes del slider |
-| GET | `/api/gallery/gallery` | Imágenes de la galería |
-| GET | `/api/gallery/all` | Todas las imágenes |
-| POST | `/api/gallery` | Crear imagen |
-| PUT | `/api/gallery/:id` | Actualizar imagen |
-| DELETE | `/api/gallery/:id` | Eliminar imagen |
-| PATCH | `/api/gallery/:id/toggle` | Activar/desactivar |
+| GET | `/api/gallery/slider` | Slider images |
+| GET | `/api/gallery/gallery` | Gallery images |
+| GET | `/api/gallery/all` | All images |
+| POST | `/api/gallery` | Create image |
+| PUT | `/api/gallery/:id` | Update image |
+| DELETE | `/api/gallery/:id` | Delete image |
+| PATCH | `/api/gallery/:id/toggle` | Enable/disable image |
 
-### Pagos (MercadoPago)
+### Payments (MercadoPago)
 
-| Método | Endpoint | Descripción |
+| Method | Endpoint | Description |
 |--------|----------|-------------|
-| POST | `/api/payment/create-preference` | Crear preferencia de pago |
+| POST | `/api/payment/create-preference` | Create payment preference |
 
 ---
 
-## 🎨 Convenciones de Código
+## 🎨 Code Conventions
 
 ### Frontend
 
-- **Componentes**: PascalCase (`ProductCard.tsx`)
+- **Components**: PascalCase (`ProductCard.tsx`)
 - **Hooks**: camelCase (`useDebounce.ts`)
-- **Páginas**: `page.tsx` (Next.js App Router)
-- **Estilos**: Tailwind CSS
-- **Estado**: Zustand en `/store`
+- **Pages**: `page.tsx` (Next.js App Router)
+- **Styles**: Tailwind CSS
+- **State**: Zustand in `/store`
 
 ### Backend
 
-- **Controladores**: Singular, ejemplo `ProductController.ts`
-- **Rutas**: Plural, ejemplo `/api/products`
-- **Modelos**: Singular, ejemplo `Product.ts`
-- **Servicios**: Nombre descriptivo, ejemplo `ProductService.ts`
+- **Controllers**: Singular, e.g. `ProductController.ts`
+- **Routes**: Plural, e.g. `/api/products`
+- **Models**: Singular, e.g. `Product.ts`
+- **Services**: Descriptive name, e.g. `ProductService.ts`
 
 ---
 
-## 🔧 Scripts Disponibles
+## 🔧 Available Scripts
 
 ### Frontend
 
 ```bash
-npm run dev      # Desarrollo
-npm run build    # Build producción
-npm run start    # Servir producción
-npm run lint     # Linter
+npm run dev      # Development server
+npm run build    # Production build
+npm run start    # Serve production build
+npm run lint     # Run linter
 ```
 
 ### Backend
 
 ```bash
-npm run dev          # Desarrollo con tsx
-npm run build        # Compilar TypeScript
-npm run start        # Producción (node)
-npm run seed:products  # Cargar productos de prueba
-npm run seed:gallery   # Cargar imágenes de prueba
+npm run dev            # Development with tsx
+npm run build          # Compile TypeScript
+npm run start          # Production (node)
+npm run seed:products  # Load sample products
+npm run seed:gallery   # Load sample images
 ```
 
 ---
 
-## ☁️ Deploy
+## ☁️ Deployment
 
 ### Frontend → Vercel
 
-1. Ir a [vercel.com](https://vercel.com)
-2. Importar repositorio `E-Commerce-Website`
+1. Go to [vercel.com](https://vercel.com)
+2. Import the `E-Commerce-Website` repository
 3. Framework: **Next.js**
-4. Agregar variable de entorno:
-   - `NEXT_PUBLIC_API_URL` = URL del backend en Render
-5. Deploy automático en push a main
+4. Add environment variable:
+   - `NEXT_PUBLIC_API_URL` = your backend URL on Render
+5. Auto-deploy on push to main
 
 ### Backend → Render
 
-1. Ir a [render.com](https://render.com)
-2. Nuevo **Web Service**
-3. Conectar repositorio GitHub
-4. Configuración:
+1. Go to [render.com](https://render.com)
+2. Create a new **Web Service**
+3. Connect your GitHub repository
+4. Configuration:
    - Root Directory: `backend`
    - Build Command: `npm install`
    - Start Command: `npx tsx src/index.ts`
 5. Environment Variables:
    - `PORT=3001`
-   - `MONGO_URI=tu_mongodb_connection_string`
+   - `MONGO_URI=your_mongodb_connection_string`
 6. Deploy
 
 ---
 
-## ⚠️ Notas Importantes
+## ⚠️ Important Notes
 
 ### MercadoPago
 
-- Requiere cuenta verificada para pagos reales
-- Modo sandbox usa usuarios de prueba
-- Configurar con variables de entorno
+- Requires a verified account for real payments
+- Sandbox mode uses test users
+- Configure via environment variables
 
-### Imágenes
+### Images
 
-- Usan Unsplash para desarrollo
-- Pueden caducar o no cargar
-- En producción, usar Cloudinary o similar
+- Unsplash is used for development
+- Images may expire or fail to load
+- For production, use Cloudinary or a similar service
 
-### Autenticación Admin
+### Admin Authentication
 
--当前没有真正的保护
-- Cookies básico (sin JWT)
-- Cambiar credenciales en producción
+- No real protection currently implemented
+- Basic cookies (no JWT)
+- Change credentials before going to production
 
 ---
 
 ## 🐛 Troubleshooting
 
-### Error de conexión con MongoDB
+### MongoDB connection error
 
-Verificar que `MONGO_URI` sea correcta y la red permita conexión a Atlas.
+Verify that `MONGO_URI` is correct and that your network allows connections to Atlas.
 
-### Error de build en Vercel
+### Vercel build error
 
-Limpiar cache: `rm -rf frontend/.next`
+Clear the cache: `rm -rf frontend/.next`
 
-### Imágenes no cargan
+### Images not loading
 
-Verificar que `next.config.js` tenga los dominios permitidos en `images.remotePatterns`.
-
----
-
-## 📞 Soporte
-
-Para dudas técnicas o reportar bugs, contactar al equipo de desarrollo.
+Check that `next.config.js` has the allowed domains configured under `images.remotePatterns`.
 
 ---
-
-*Guía técnica para desarrolladores del E-Commerce Website*
